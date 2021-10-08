@@ -1,0 +1,86 @@
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+import styled, { css } from 'styled-components'
+import signupImage from "../public/signup.png";
+import skilzenlogo from "../public/skilzenlogo.png";
+import student from "../public/student.svg";
+import leftvector from "../public/leftvector.svg";
+import rightvector from "../public/rightvector.svg";
+import signinimage from '../public/Signin_existinguser 1.svg'
+import fblogo from '../public/fb.png'
+import googlelogo from '../public/google.png'
+import linkedinlogo from '../public/linkedin.png'
+import forgotpassword from '../public/Forgot_pass.svg'
+import styles from "../styles/Home.module.css";
+import forgotpass2 from '../public/Forgort_pass_pg2.svg'
+
+const StyledLink = styled.a`
+  color: #F26A7E;
+`
+
+
+const recruitersignup = () => {
+    return (
+        <html>
+        <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"/>
+        </head>
+        <body>
+          <div className="leftvector" >
+            <Image src={leftvector} />
+          </div>
+          <div className="rightvector" style={{transform: "rotate(-60deg)"}}>
+            <Image src={rightvector} />
+          </div>
+          <div className="signup-main">
+            <div className="image-block">
+              <div className="skilzenlogo">
+              <Link href="/"><Image src={skilzenlogo} /></Link>
+              </div>
+              <div className="signupImage">
+                <Image width={400} height={280} src={forgotpass2} />
+              </div>
+            </div>
+            <div className="signin-block">
+              <div className="toptext-signin"><b>Almost Done!</b></div>
+              <div className="secondtext">Password reset</div>
+              
+              <div className="vercode">
+                <span>Verification code<span style={{color:"#F26A7E"}}>*</span></span>
+                <input/>
+              </div>
+              <div className="password">
+                <span>Password<span style={{color:"#F26A7E"}}>*</span></span>
+                <input/>  
+              </div>
+              <div className="password">
+                <span>Re-enter Password<span style={{color:"#F26A7E"}}>*</span></span>
+                <input/>  
+              </div>
+              
+              
+              <div style={{width:"80%",display:"flex",flexDirection:"column",paddingTop:"1%"}}>
+                <span>
+                  <input type="checkbox" value="1" id="customCheckboxInput" name="Show Password" />
+                  <span style={{fontSize: "12px",lineHeight: "15px"}}>    Show Password</span>
+                </span>
+                <span>
+                  <input type="checkbox" value="1" id="customCheckboxInput" name="Keep me logged in" />
+                  <span style={{fontSize: "12px",lineHeight: "15px"}}>    Keep me logged in </span>
+                </span>
+                
+              </div>
+              <div style={{display:"flex",width:"100%",justifyContent:"center",paddingTop:"15%"}}>
+                <button className="signinbtn">Save</button>
+              </div>
+              
+            </div>
+          </div>
+        </body>
+      </html>  );
+}
+ 
+export default recruitersignup;
